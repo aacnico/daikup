@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Matias Moran, Acnico/Nicolas Moran">
+    <meta name="description" content="Daikup is a Latin American art studio focused on creating interesting works, drawings, and narratives that explore topics of social interest.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#e20220">
+    <link rel="canonical" href="https://daikup.vercel.app/">
+    <link rel="icon" href="assets/icon.ico">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Daikup | Latin American art studio">
+    <meta property="og:description" content="Latin American art studio dedicated to digital art, illustrations, stories and visual creation.">
+    <meta property="og:image" content="https://daikup.vercel.app/assets/daikup-banner.png">
+    <meta property="og:url" content="https://daikup.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Daikup">
+
+    <!-- TWITTER / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daikup | Estudio artístico latinoamericano">
+    <meta name="twitter:description" content="Latin American art studio dedicated to digital art, illustrations, stories and visual creation.">
+    <meta name="twitter:image" content="https://daikup.vercel.app/assets/daikup-banner.ppg">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <!-- LIBRARY OF ICONS AND MORE-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- LANGUAGES -->
+    <link rel="alternate" hreflang="es" href="https://daikup.vercel.app/">
+    <link rel="alternate" hreflang="en" href="https://daikup.vercel.app/en/">
+    <link rel="alternate" hreflang="x-default" href="https://daikup.vercel.app/">
+
+    <title>Daikup | Art Studio </title>
+</head>
+<body id="body">
+    
+    <header>
+        <nav>
+            <input type="checkbox" id="nav">
+            <label for="nav" class="navBtn"> 
+                <i class="ri-menu-line"></i>
+            </label>
+            <div class="overlay-nav"></div>
+            
+            <div class="lan">
+                <a href="index.html">
+                    <img class="logo" src="assets/logo.png" alt="daikup logo">
+                    <h3>DAIKUP</h3>
+                </a>
+                <button id="lanEs" class="lanActive">ES</button> <span class="lanActive">/</span>
+                <button id="lanEn">EN</button>
+            </div>
+            
+            <ul class="navBar">
+                <li><a class="navLinks" href="index.html"> <i class="fa-solid fa-house homeLicon"></i> <span class="homeL">HOME</span></a></li>
+                <li><a class="navLinks" href="#collections">COLLECTIONS</a></li>
+                <li><a class="navLinks" href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>D A I K U P</h1>
+
+        </section>
+
+        <section id="collections">
+            <h2 class="coll-mainT titles elemento"> <i class="ri-circle-fill"></i> Collections </h2>
+            <div class="collectionsC">
+                
+                <div class="coll-item">
+                    <div class="CI-initial">
+                        <div class="CI-txt" data-x="-30%">
+                            <h3 class="ci-title">TOKO</h3>
+                            <p>Una mezcla de <span>ira, tristeza y nostalgia </span>tocaron profundamente el corazón de un joven por situaciones las cuales el no puede cambiar. Es mediante un pequenyo amigo, con buen calzado,que el chico logra <span>sanar.</span></p>
+
+                        </div>
+                        <div class="CI-img" data-x="20%">
+                            <img src="assets/toko-portrait.png" alt="cover of toko, the daikup collection">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="click-here">
+                    <img class="elemento" src="assets/click-here.png" alt="click-collection" loading="lazy" decoding="async">
+                </div>
+
+                <div class="CI-expand">
+                        <div class="back-nav">
+                            <input type="hidden" id="coll-back">
+                            <label for="coll-back" class="label-cb"> <i class="ri-arrow-go-back-line"></i>BACK TO EXPLORE</label>
+                        </div>
+                        <div class="CI-footer">
+                            <div class="CI-info">
+                                <span>Children's Story / Illustrations / Original</span>
+                            </div>
+                            <div class="CI-see">
+                                <a href="" id="coll-link"> See work <i class="ri-arrow-right-up-line"></i> </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="concept">
+            <div class="conceptC elemento">
+                <div class="concept-dec">
+                    <i class="ri-circle-fill"></i>
+                </div>
+                <div class="concept-imgC">
+                    <img src="assets/concept-image.png" alt="artistic concept of the daikup studio" loading="lazy" decoding="async">
+                </div>
+                <div class="concept-item">
+                    <div class="concept-title elemento">
+                        <h2>What is <span>Daikup</span>?</h2>
+                    </div>
+                    <div class="concept-text elemento">
+                        <p>We are a Latin American art studio that explores digital art, storytelling, and visual creation. We develop illustrations, concepts, and narratives that combine creativity, identity, and experimentation.</p>
+                    </div>
+                    <div class="concept-extra elemento">
+                        <ul>
+                            <li> <i class="ri-circle-fill"></i> Art Studio</li>
+                            <li> <i class="ri-circle-fill"></i> Latin American </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2 class="titles gall-title elemento"><i class="ri-circle-fill"></i> Drawing Gallery</h2>
+            <div class="gall-ov"></div>
+            <div class="swiper mySwiper galleryC elemento">
+                
+                <div class="swiper-wrapper elemento">
+
+                    <div class="swiper-slide">
+                        <img src="assets/gallery1.jpg" alt="drawing of eschertal by daikup"  loading="lazy" decoding="async">
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <img src="assets/gallery2.png" alt="Drawing of one of his original characters from the art studio daikup"  loading="lazy" decoding="async">
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <img src="assets/gallery3.png" alt="drawing of toko, the first official collection of daikup"  loading="lazy" decoding="async">
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <img src="assets/gallery4.jpg" alt="Daikup character drawing"  loading="lazy" decoding="async">
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <img src="assets/gallery1.jpg" alt="drawing of eschertal by daikup" loading="lazy" decoding="async">
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <img src="assets/gallery2.png" alt="Drawing of one of his original characters from the art studio daikup"  loading="lazy" decoding="async">
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <img src="assets/gallery3.png" alt="drawing of toko, the first official collection of daikup"  loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/gallery4.jpg" alt="Daikup character drawing"  loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/gallery1.jpg" alt="drawing of eschertal by daikup"  loading="lazy" decoding="async">
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <img src="assets/gallery2.png" alt="Drawing of one of his original characters from the art studio daikup"  loading="lazy" decoding="async">
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <img src="assets/gallery3.png" alt="drawing of toko, the first official collection of daikup"  loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/gallery4.jpg" alt="Daikup character drawing"  loading="lazy" decoding="async">
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+
+        <section class="decoration1">
+            <div>
+                <i class="ri-circle-fill contact-circle"></i> <span>DAIKUP</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>ART</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>STUDI</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>ILLUSTRATIONS</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>DRAWS</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>HISTORIES</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>INNOVATION</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>WORKS</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>HIGH</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>QUALITY</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>DAIKUP</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>ART</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>STUDIO</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>ILLUSTRATIONS</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>DRAWS</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>HISTORIES</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>INNOVATION</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>WORKS</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>HIGH</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>QUALITY</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>DAIKUP</span>
+                <i class="ri-circle-fill contact-circle"></i> <span>ART</span>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer id="contact">
+        <div class="contactC">
+            <div class="contact-text elemento">
+                <div class="introduction elemento">
+                    <h4> <i class="ri-circle-fill"></i>Want to know more?</h4>
+                    <span>Discover our creative universe, learn about our process, and explore the stories behind each work.</span>
+                </div>
+                <div class="phrase elemento">
+                    <img src="" alt="">
+                    <h3>
+                        <span>Daikup</span> is more <br>
+                        than an art studio
+                    </h3>
+                </div>
+            </div>
+            <div class="contact-links">
+                <div class="social-media elemento">
+                    <h4> <i class="ri-circle-fill contact-circle"></i>Contact</h4>
+                    <ul>
+                        <li><a target="_blank" href="https://www.instagram.com/daikup_" rel="noopener noreferrer">Instagram</a> <i class="ri-instagram-line"></i></li>
+                        <li><a target="_blank" href="https://www.youtube.com/@daikup" rel="noopener noreferrer">Youtube</a> <i class="ri-youtube-line"></i></li>
+                        <li><a target="_blank" href="https://x.com/daikup_" rel="noopener noreferrer">X (Twitter)</a> <i class="ri-twitter-x-line"></i></li>
+                    </ul>
+                </div>
+                <div class="navigation elemento">
+                    <h4> <i class="ri-circle-fill contact-circle"></i>Navegation</h4>
+                    <ul>
+                        <li><a href="#hero"><span class="number">(1)</span> Home</a></li>
+                        <li><a href="#collections"><span class="number">(2)</span> Collections</a></li>
+                        <li><a href="#concept"><span class="number">(3)</span> Concept</a></li>
+                    </ul>
+                </div>
+                <div class="backtt elemento">
+                    <a href="#hero"><i class="ri-arrow-up-line"></i></a>
+                </div>
+            </div>
+            <div class="contact-copyright">
+                <div>
+                    <span>© Daikup 2026All rights reserved</span>
+                </div>
+                <div>
+                    <span>Developed by <a href="https://www.instagram.com/aacnico" style="color: var(--red-contrast); font-weight: bold;">Acnico</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT AND JS LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

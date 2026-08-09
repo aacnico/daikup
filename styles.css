@@ -1,0 +1,1229 @@
+/* ---------------------------- GENERAL SETTINGS ----------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: var(--text);
+    color: var(--text-color);
+    -webkit-tap-highlight-color: transparent;
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--red-contrast);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: #fa1534;
+}
+
+:root {
+    --background: rgb(17, 17, 17);
+    --contrast: rgb(92, 92, 92);
+    --text-color: rgb(220, 220, 223);
+    --red-contrast: #e20220;
+
+    --titles:"Oswald";
+    --text:"Inter";
+
+    --border:  1px solid var(--contrast);
+}
+
+.ri-circle-fill,
+.lanActive {
+    color: var(--red-contrast);
+}
+
+.titles {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 70px;
+}
+
+body {
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+}
+
+/* ---------------------------- NAVIGATION BAR ---------------------------- */
+
+header {
+    display: flex;
+    width: 100%;
+}
+
+header nav {
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+
+    display: flex;
+    align-items: center;
+
+    height: 60px;
+
+    font-family: "Oswald";
+    font-weight: 400;
+
+    background-color: var(--background);
+    border-radius: 10px;
+    border: 0.6px solid var(--contrast);
+}
+
+.overlay-nav{
+    position: absolute;
+    z-index: 100;
+
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--background);
+    border-radius: 10px 10px 0px 0px;
+    border: 0.6px solid var(--contrast);
+}
+
+.logo {
+    position: relative;
+    z-index: 100;
+    width: 50px;
+    margin-left: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+nav ul li {
+    position: relative;
+    z-index: 20;
+    padding: 1px 3px;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.navLinks {
+    font-size: 18px;
+    font-family: var(--text);
+    font-weight: bolder;
+    color: var(--text-color);
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--red-contrast);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .6s ease;
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1);
+}
+
+nav ul li:not(:hover)::after {
+    transform-origin: right;
+}
+
+#nav {
+    position: relative;
+    display: none;
+}
+
+.homeL {
+    display: none;
+}
+
+.navBtn {
+    z-index: 110;
+    display: none;
+    margin-right: 20px;
+    font-size: 40px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.lan {
+    z-index: 110;
+    display: flex;
+    align-items: center;
+}
+
+.lan a {
+    display: flex;
+    align-items: center;
+}
+
+#lanEn, #lanEs {
+    z-index: 110;
+    padding: 5px 10px;
+    font-family: var(--text);
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#lanEn:hover , #lanEs:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------- HERO SECTION ---------------------------- */
+#hero {
+    height: 100vh;
+    background:
+        linear-gradient(to top, #000000, #00000048, transparent),
+        url("assets/daikup-banner.png");
+    background-position: center;
+    background-size: cover;
+
+    transition: opacity .6s ease, filter .6s ease;
+}
+
+#hero.cambiando {
+    opacity: 0;
+    filter: blur(15px);
+}
+
+/*
+#hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+}*/
+
+
+/* MINI DECORATION*/
+
+.decoration1 {
+    position: relative;
+    height: 100px;
+    overflow-x: hidden;
+}
+
+.decoration1 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 70px;
+    font-weight: bold;
+    opacity: .7;
+    animation: text-hero 15s infinite linear;
+}
+
+/* ---------------------------- COLLECTIONS SECTION ---------------------------- */
+
+.sc {
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#collections {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px );
+    padding: 50px 5%;
+}
+
+.collectionsC {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 67px;
+    /* MORE COLLECTIONS
+    display: grid;
+    grid-template-rows: 10%  1fr;*/
+}
+
+.coll-mainT {
+    transform: translateX(-100%);
+}
+
+.titles i{
+    font-size: 50px;
+}
+
+.coll-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 350px;
+    padding: 20px;
+    background: var(--background);
+    border-radius: 20px;
+    border: var(--border);
+    transition: box-shadow .5s;
+}
+
+.CI-initial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+}
+
+
+.CI-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 1s;
+}
+
+.CI-txt h3 {
+    font-size: 80px;
+    transition: font-size 1s;
+}
+
+.CI-txt p {
+    width: 300px;
+    font-size: 14px;
+}
+
+.CI-txt p span {
+    font-weight: bolder;
+    color: var(--red-contrast);
+}
+
+.CI-img {
+    z-index: 80;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.CI-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.collActive {
+    transform: scale(1.5) translateX(var(--x));
+}
+
+.collTxtActive {
+    transform: scale(1.5) translateX(var(--x));
+}
+
+.collFront {
+    z-index: 115;
+}
+
+.CI-expand {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.expand-act {
+    z-index: 110;
+    opacity: 1;
+}
+
+.back-nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0px 20px;
+}
+
+.label-cb {
+    cursor: pointer;
+}
+
+.label-cb i {
+    font-size: 18px;
+}
+
+.CI-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-top: auto;
+    padding: 0px 20px;
+    font-size: 18px;
+    border-top: var(--border);
+}
+
+.CI-footer div a {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    color: white;
+}
+
+.click-here {
+    position: absolute;
+    z-index: 90;
+    transform: translateX(160%);
+}
+
+.click-here-active {
+    z-index: -1;
+}
+
+.click-here img {
+    width: 200px;
+    height: 200px;
+}
+
+/* ---------------------------- CONCEPT SECTION ---------------------------- */
+
+#concept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 2%;
+}
+
+.conceptC {
+    display: grid;
+    grid-template-columns: 100px 1fr 55%;
+    height: calc(100% - 200px);
+    width: 100%;
+    padding: 0px 5%;
+    background: var(--background);
+    border: 2px solid var(--contrast);
+    border-radius: 40px;
+    transition: box-shadow .5s;
+}
+
+.conceptC:hover,
+.coll-item:hover {
+    box-shadow: 0 0  30px var(--contrast);
+}
+
+.concept-dec i {
+    position: absolute;
+    font-size: 40px;
+    transform: translateY(50px);
+}
+
+.concept-imgC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.concept-imgC img {
+    width: 400px;
+}
+
+.concept-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px 5%;
+}
+
+.concept-title {
+    font-size: 35px;
+}
+
+.concept-title h2 span  {
+    color: var(--red-contrast);
+}
+
+.concept-text {
+    font-size: 25px;
+}
+
+.concept-extra {
+    display: flex;
+    margin-top: 20px;
+}
+
+.concept-extra ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.concept-extra ul li {
+    padding: 2px 10px;
+    font-size: 22px;
+    border-top: 2px solid var(--contrast);
+}
+
+.concept-extra ul li i {
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+/* ---------------------------- WORKS SECTION ---------------------------- */
+
+
+#gallery {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0%;
+}
+
+.galleryC{
+    max-width: 100%;
+    margin:auto;
+}
+
+.gall-title {
+    transform: translateX(-50%);
+}
+
+.gall-ov {
+    position: absolute;
+    z-index: -1;
+    height: 300px;
+    width: 1000px;
+    background-color: var(--red-contrast);
+    border-radius: 70%;
+    transform: translateY(10%);
+    filter: blur(100px);
+}
+
+.swiper{
+    width:100%;
+    padding:70px 0;
+}
+
+.swiper-slide{
+    width:295px;
+    height:420px;
+    overflow:hidden;
+}
+
+.swiper-slide img{
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+/* ---------------------------- FOOTER SECTION ---------------------------- */
+
+#contact {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contact-text {
+    margin: 20px 20px 0px 20px;
+}
+
+.introduction {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.introduction h4 {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: var(--red-contrast);
+}
+
+.introduction h4 i {
+    margin-right: 5px;
+    font-size: 15px;
+    color: var(--red-contrast);
+}
+
+.introduction span {
+    width: 550px;
+    text-align: end;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--contrast);
+}
+
+.phrase {
+    display: flex;
+}
+
+.phrase h3 {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 70px;
+}
+
+.phrase h3 span {
+    color: var(--red-contrast);
+}
+
+.contact-links {
+    display: grid;
+    height: 150px;
+    margin: 20px;
+    grid-template-columns: 1fr 1fr 15%;
+    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.social-media, .navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: var(--border);
+}
+
+.contact-circle {
+    font-size: 12px;
+    color: var(--red-contrast);
+}
+
+.contact-links div h4 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+}
+
+.social-media ul, .navigation ul {
+    display: flex;
+    gap: 20px;
+    margin-top: auto;
+}
+
+.social-media ul li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: auto;
+    background: var(--background);
+    border: var(--border);
+    border-radius: 3px;
+    transition: border-color .5s; 
+}
+
+.social-media ul li:hover {
+    border-color: var(--red-contrast);
+}
+
+.social-media ul li a {
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.social-media ul li i {
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+    color: var(--text-color);
+    background: var(--contrast);
+    border-radius: 0 3px 3px 0;
+    transition: background-color .5s;
+}
+
+.social-media li:hover i {
+    background-color: var(--red-contrast);
+}
+
+.navigation li {
+    font-size: 20px;
+}
+
+.navigation a {
+    position: relative;
+    z-index: 10;
+    padding: 5px 5px 0px 0px;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--red-contrast);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation a:not(:hover)::after {
+    transform-origin: right;
+}
+
+.number {
+    display: inline-block;
+    font-weight: bold;
+    transition: color .5s;
+}
+
+.navigation ul li a:hover .number {
+    color: var(--red-contrast);
+}
+
+.backtt  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.backtt a i  {
+    display: inline-block;
+    color: var(--contrast);
+    transition: color .5s;
+}
+
+.backtt a:hover i {
+    color: var(--red-contrast);
+}
+
+.contact-copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: var(--border);
+    background: var(--background);
+}
+
+@media (max-width: 768px)  {
+    /* ---------------------------- NAVIGATION VAR MOBILE ---------------------------- */
+
+    header nav {
+        top: 0px;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        border-radius: 0px 0px 0px 0px;
+        border: none;
+    }
+
+    .navBtn {
+        position: relative;
+        display: flex;
+    }
+
+    .navBtn::after {
+        content: "✕";
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 2px 3px;
+        background: var(--background);
+        opacity: 0;
+        transition: opacity .2s ;
+    }
+
+    .overlay-nav {
+        display: flex;
+        border-radius: 0px 0px 10px 10px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        transition: all .8s;
+    }
+
+    nav ul {
+        position: absolute;
+        top: -200px;
+        z-index: -1;
+
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: start;
+        gap: 2px;
+
+        width: 100%;
+        margin: 0;
+        padding: 20px 10px;
+
+        background: var(--background);
+        border-bottom: 1.5px solid var(--contrast);
+        border-radius: 0px 0px 10px 10px;
+        transition: all .4s ease;
+    }
+
+    #nav:checked ~ .overlay-nav {
+        z-index: 100;
+        border-bottom: none ;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    #nav:checked ~ .navBtn::after {
+        opacity: 1;
+    }
+
+    #nav:checked ~ ul {
+        top: 55px;
+    }
+
+    nav ul li { border: none; }
+
+    .navLinks {font-size: 25px;}
+
+    nav ul li::after { display: none; }
+    nav ul li:hover .navLinks {  color: var(--text-color);}
+
+    .homeLicon { display: none; }
+
+    .homeL { display: flex; }
+/* ---------------------------- HERO SECTION ---------------------------- */
+
+#hero { background-image: url(assets/gallery1.jpg); }
+
+/* ---------------------------- COLLECTIONS SECTION ---------------------------- */
+
+#collections { height: auto; }
+
+.titles {
+    font-size: 30px;
+    transform: translate(0);
+}
+
+.titles i {
+    font-size: 20px;
+}
+
+.coll-item  {
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.CI-initial {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 30px;
+    height: auto;
+    padding: 30px;
+}
+
+.CI-txt {
+    flex-direction: row;
+    gap: 10px;
+}
+.CI-txt h2 {
+    font-size: 35px;
+}
+
+.CI-txt p {
+    width: 175px;
+    text-align: end;
+    font-size: 10px;
+}
+
+.CI-img {
+    width: 100%;
+    height: 350px;
+}
+
+
+.collActive {
+    transform: scale(1.2) translate(0,-10%);
+}
+
+.collTxtActive {
+    transform: scale(1.2) translate(0,25%);
+}
+
+.CI-footer {
+    font-size: 15px;
+}
+
+.click-here {
+    display: none;
+}
+
+
+
+/* ---------------------------- CONCEPT SECTION ---------------------------- */
+
+#concept {
+    padding: 80px 0px;
+    height: auto;
+}
+
+.conceptC {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 50px 5%;
+    border-radius: 0;
+    border-right: none;
+    border-left: none;
+}
+
+.concept-dec i { position: relative; }
+
+.concept-item { padding: 0; }
+
+.concept-imgC img {
+    width: 300px;
+}
+
+.concept-title { font-size: 22px; }
+
+.concept-text { font-size: 20px; }
+
+.concept-extra ul { width: 100%; }
+
+/* ---------------------------- GALLERY SECTION ---------------------------- */
+
+.gall-ov {
+    width: 225px;;
+    height: 325px;
+}
+
+/* ---------------------------- FOOTER SECTION ---------------------------- */
+.introduction h4 {
+    font-size: 18px;
+}
+
+.introduction span {
+    width: 300px;
+    font-size: 15px;
+}
+
+.phrase h3 {
+    font-size: 35px;
+    line-height: 30px;
+}
+
+.contact-links {
+    grid-template: 1fr 1fr /1fr 1fr;
+    height: auto;
+    margin: 0;
+    margin-top: 20px;
+    border-top: 2px solid var(--contrast);
+}
+
+.social-media {
+    grid-column: span 2;
+}
+
+.social-media h4 {
+    margin-bottom: 10px;
+}
+
+.social-media ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation {
+    border-right: none;
+}
+
+.navigation ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.backtt {
+    justify-content: right;
+    align-items: end;
+    font-size: 40px;
+}
+
+.backtt a i  {
+    padding: 10px;
+    margin: 20px;
+    background: var(--background);
+    border: 1px solid var(--contrast);
+    border-radius: 50%;
+    transition: border .5s, color .5s;
+}
+
+.backtt a:hover i {
+    border: 1px solid var(--red-contrast);
+}
+
+.contact-copyright {
+    font-size: 10px;
+}
+
+/* -------------------- dec ------------------- */
+
+.decoration1 div {
+    font-size: 50px;
+}
+
+}
+
+/* ---------------------------- MEDIA QUERIES TABLET ---------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .titles {
+        transform: translateX(0);
+    }
+
+    header nav {
+        font-size: 20px;
+    }
+    /* ---------------------------- HERO SECTION ---------------------------- */
+
+    /* ---------------------------- COLLECTIONS SECTION ---------------------------- */
+    .coll-item  {
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    
+    .CI-initial {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 30px;
+        padding: 30px;
+    }
+    
+    .CI-txt {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .CI-txt h2 {
+        font-size: 70px;
+    }
+    
+    .CI-txt p {
+        width: 300px;
+        text-align: end;
+        font-size: 14px;
+    }
+    
+    .CI-img {
+        width: 100%;
+        height: 600px;
+    }
+    
+    .collActive {
+        transform: scale(1.2) translate(0,-5%);
+    }
+    
+    .collTxtActive {
+        transform: scale(1.2) translate(0,25%);
+    }
+    
+    .CI-footer {
+        font-size: 20px;
+    }
+
+    .click-here { 
+        display:none;
+    }
+    
+    /* ---------------------------- CONCEPT SECTION ---------------------------- */
+
+    .conceptC {
+        grid-template-columns: 50px 1fr 60%;
+        height: auto;
+        padding: 30px;
+    }
+
+    .concept-imgC img {
+        width: 250px;
+    }
+
+    .concept-title {
+        font-size: 30px;
+    }
+
+    .concept-text {
+        font-size: 20px;
+    }
+    
+    /* ---------------------------- WORKS SECTION ---------------------------- */
+
+    .gall-ov {
+        height: 600px;
+        width: 600px;
+    }
+
+    .swiper-slide {
+        height: auto;
+        width: 400px;
+    }
+    
+    /* ---------------------------- FOOTER SECTION ---------------------------- */
+
+    #contact {
+        height: 80vh;
+    }
+    .phrase h3 {
+        font-size: 60px;
+    }
+
+    .social-media, .navigation, .backtt {
+        border: none;
+    }
+
+    .contact-links {
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+        border: none;
+    }
+
+    .social-media {
+        grid-column: span 2;
+    }
+
+    .social-media ul li a {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ---------------------------- MEDIA QUERIES TABLET LANDSCAPE ---------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    /* ---------------------------- HERO SECTION ---------------------------- */
+    /* ---------------------------- COLLECTIONS SECTION ---------------------------- */
+    .CI-initial {
+        height: 450px;
+        flex-direction: row;
+    }
+
+    .CI-txt {
+        flex-direction: column;
+    }
+
+    .CI-txt h2 {
+        font-size: 90px;
+    }
+
+    .CI-txt p {
+        text-align: start;
+        font-size: 18px;
+    }
+
+    .CI-img img {
+        height: 400px;
+    }
+
+    .click-here img {
+        transform: translateX(20%);
+    }
+
+    .collActive {
+        transform: scale(1.3) translate(10%,0);
+    }
+    .collTxtActive {
+        transform: scale(1.5) translate(0);
+    }
+    /* ---------------------------- CONCEPT SECTION ---------------------------- */
+
+    .conceptC {
+        grid-template-columns: 50px  1fr 50%;
+    }
+    .concept-imgC img {
+        width: 350px;
+    }
+
+    .concept-title {
+        font-size: 35px;
+    }
+    
+    /* ---------------------------- WORKS SECTION ---------------------------- */
+
+    .swiper-slide {
+        height: auto;
+        width: 300px;
+    }
+
+    .gall-ov {
+        height: 500px;
+        width: 800px;
+    }
+
+    
+    /* ---------------------------- FOOTER SECTION ---------------------------- */
+
+    .contact-links {
+        grid-template-rows: 150px;
+        grid-template-columns: 1fr 1fr 10%;
+    }
+
+    .social-media {
+        grid-column: span 1;
+        font-size: 8px;
+    }
+    
+
+}
+
+@keyframes text-hero {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-32%);
+    }
+}
+
+.elemento {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 1.3s ease, transform 1.5s ease;
+}
+
+.elemento.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
