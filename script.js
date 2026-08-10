@@ -9,12 +9,12 @@ const lanEn = document.getElementById("lanEn");
 
 lanEn.addEventListener("click", () => {
     localStorage.setItem("english", "en");
-    window.location.href = "/en/index.html";
+    window.location.href = "/en";
 });
 
 lanEs.addEventListener("click", () => {
     localStorage.setItem("spanish", "es");
-    window.location.href = "/index.html";
+    window.location.href = "/";
 });
 
 collItems.forEach(item => {
