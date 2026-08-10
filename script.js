@@ -9,12 +9,12 @@ const lanEn = document.getElementById("lanEn");
 
 lanEn.addEventListener("click", () => {
     localStorage.setItem("english", "en");
-    window.location.href = "/en";
+    window.location.href = "/daikup/en";
 });
 
 lanEs.addEventListener("click", () => {
     localStorage.setItem("spanish", "es");
-    window.location.href = "/";
+    window.location.href = "/daikup/";
 });
 
 collItems.forEach(item => {
@@ -95,8 +95,8 @@ elementos.forEach(elemento => observer.observe(elemento));
 const hero = document.querySelector('#hero');
 
 const imagenes = [
-    'assets/daikup-banner.png',
-    'assets/daikup-banner2.png'
+    'assets/daikup-banner.webp',
+    'assets/daikup-banner2.webp'
 ];
 
 let indice = 0;
