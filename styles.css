@@ -9,6 +9,7 @@
     font-family: var(--text);
     color: var(--text-color);
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
