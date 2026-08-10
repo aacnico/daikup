@@ -857,7 +857,7 @@ nav ul li:not(:hover)::after {
     flex-direction: row;
     gap: 10px;
 }
-.CI-txt h2 {
+.CI-txt h3 {
     font-size: 35px;
 }
 
@@ -1036,7 +1036,7 @@ nav ul li:not(:hover)::after {
         gap: 10px;
     }
 
-    .CI-txt h2 {
+    .CI-txt h3 {
         font-size: 70px;
     }
     
@@ -1143,7 +1143,7 @@ nav ul li:not(:hover)::after {
         flex-direction: column;
     }
 
-    .CI-txt h2 {
+    .CI-txt h3 {
         font-size: 90px;
     }
 
