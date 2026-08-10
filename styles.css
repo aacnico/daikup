@@ -825,7 +825,7 @@ nav ul li:not(:hover)::after {
     .homeL { display: flex; }
 /* ---------------------------- HERO SECTION ---------------------------- */
 
-#hero { background-image: url(assets/gallery1.webp); }
+#hero { background-image: url(assets/daikup-banner-mobile.webp); }
 
 /* ---------------------------- COLLECTIONS SECTION ---------------------------- */
 
