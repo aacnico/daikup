@@ -9,12 +9,12 @@ const lanEn = document.getElementById("lanEn");
 
 lanEn.addEventListener("click", () => {
     localStorage.setItem("english", "en");
-    window.location.href = "/daikup/en";
+    window.location.href = "daikup.vercel.app/en";
 });
 
 lanEs.addEventListener("click", () => {
     localStorage.setItem("spanish", "es");
-    window.location.href = "/daikup/";
+    window.location.href = "daikup.vercel.app";
 });
 
 collItems.forEach(item => {
